@@ -1,4 +1,4 @@
-import React
+import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 const QuoteScreen = () => {
@@ -16,3 +16,23 @@ return (
 };
 
 export default QuoteScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  quoteText: {
+    fontSize: 20,
+    fontStyle: "italic",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+    authorText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "gray",
+  },
+});
