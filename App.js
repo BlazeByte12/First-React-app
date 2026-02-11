@@ -1,20 +1,22 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
-import MainScreen from "./screens/MainScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import StudentScreen from "./screens/StudentScreen";
 import MessageScreen from "./screens/MessageScreen";
 import FruitScreen from "./screens/FruitScreen";
 
-const Stack = createStackNavigator
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={FruitScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-  );
 
+        <Stack.Screen name="Student" component={StudentScreen} />
+        <Stack.Screen name="Message" component={MessageScreen} />
+        <Stack.Screen name="Fruit" component={FruitScreen} />
+
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
