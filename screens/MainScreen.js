@@ -1,23 +1,26 @@
 import React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-const Stack = createStackNavigator();
+const MainScreen = (props) => {
+  return (
+    <View>
+      <Text style={styles.text}>Main Screen</Text>
 
-const MainScreen = () => {
-    return(
-        <View>
-            <Text>This is Main screen</Text>
-        </View>
-    );
+      <Button
+        title="Go to Menu Screen"
+        onPress={() => props.navigation.goBack()}
+        color="blue"
+      />
+    </View>
+  );
 };
 
-
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "centre",
-        justifyContent: "center",
-    }
-})
+  text: {
+    textAlign: "center",
+    fontSize: 20,
+    marginVertical: 20,
+  },
+});
+
+export default MainScreen;

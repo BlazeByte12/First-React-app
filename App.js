@@ -1,22 +1,51 @@
+import React from "react";
+import { Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import StudentScreen from "./screens/StudentScreen";
-import MessageScreen from "./screens/MessageScreen";
-import FruitScreen from "./screens/FruitScreen";
+import MenuScreen from "./screens/MenuScreen";
+import ListScreen from "./screens/ListScreen";
+import StudentsScreen from "./screens/StudentsScreen";
+import MainScreen from "./screens/MainScreen";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="Menu"
+          component={MenuScreen}
+          options={({ navigation }) => ({
+            headerRight: () => (
+              <>
+                <Button
+                  title="Menu"
+                  onPress={() => navigation.navigate("Menu")}
+                  color="purple"
+                />
+                <Button
+                  title="List"
+                  onPress={() => navigation.navigate("List")}
+                  color="green"
+                />
+                <Button
+                  title="Students"
+                  onPress={() => navigation.navigate("Students")}
+                  color="red"
+                />
+              </>
+            ),
+          })}
+        />
 
-        <Stack.Screen name="Student" component={StudentScreen} />
-        <Stack.Screen name="Message" component={MessageScreen} />
-        <Stack.Screen name="Fruit" component={FruitScreen} />
-
+        <Stack.Screen name="List" component={ListScreen} />
+        <Stack.Screen name="Students" component={StudentsScreen} />
+        <Stack.Screen name="Main" component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+export default App;
