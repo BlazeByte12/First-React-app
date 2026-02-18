@@ -3,10 +3,10 @@ import { Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MenuScreen from "./screens/MenuScreen";
-import ListScreen from "./screens/ListScreen";
-import StudentsScreen from "./screens/StudentsScreen";
-import MainScreen from "./screens/MainScreen";
+import MenuScreen from "./src/screens/MenuScreen";
+import ListScreen from "./src/screens/ListScreen";
+import StudentsScreen from "./src/screens/StudentsScreen";
+import MainScreen from "./src/screens/MainScreen";
 
 const Stack = createNativeStackNavigator();
 
