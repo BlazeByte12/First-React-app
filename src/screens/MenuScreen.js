@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
 
 const MenuScreen = (props) => {
   return (
@@ -9,6 +9,18 @@ const MenuScreen = (props) => {
       <Button
         title="Go to Students Screen"
         onPress={() => props.navigation.navigate("Students")}
+        color="blue"
+      />
+
+      <Button
+        title="Go to Box Screen"
+        onPress={() => props.navigation.navigate("BoxScreen")}
+        color="blue"
+      />
+
+      <Button
+        title="Go to Box2 Screen"
+        onPress={() => props.navigation.navigate("Box2Screen")}
         color="blue"
       />
 
@@ -34,7 +46,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
-    fontsize: 15,
+    fontSize: 15,
     textTransform: "uppercase",
     textAlign: "center",
   },

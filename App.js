@@ -7,6 +7,8 @@ import MenuScreen from "./src/screens/MenuScreen";
 import ListScreen from "./src/screens/ListScreen";
 import StudentsScreen from "./src/screens/StudentsScreen";
 import MainScreen from "./src/screens/MainScreen";
+import BoxScreen from "./src/screens/BoxScreen";
+import Box2Screen from "./src/screens/Box2Screen";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +45,8 @@ function App() {
         <Stack.Screen name="List" component={ListScreen} />
         <Stack.Screen name="Students" component={StudentsScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
+        <Stack.Screen name="BoxScreen" component={BoxScreen} />
+        <Stack.Screen name="Box2Screen" component={Box2Screen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
