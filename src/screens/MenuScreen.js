@@ -24,12 +24,21 @@ const MenuScreen = (props) => {
         color="blue"
       />
 
+<Button
+  title="Go to Users Screen"
+  onPress={() => props.navigation.navigate("Users")}
+  color="blue"
+/>
+
       <TouchableOpacity 
       style={styles.button}
       onPress={() => props.navigation.navigate("Students")}>
         <Text style={styles.buttonText}>Go to Students Screen</Text>
       </TouchableOpacity>
     </View>
+
+
+    
   );
 };
 
